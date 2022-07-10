@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    background-color: #ffdd00;
+    padding: 30px 40px;
+    color: black;
+    text-align: center;
+    user-select: none;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+.Sec{
+    text-align: center;
+    padding: 15px 100px;
+    background-color:#C7007D;
+    font-size: 20px;
+    color: black;
+    height: 1000px;
+}
+
+.reg{
+    border-radius: 20%;
+    color: #ffdd00;
+    padding: 100px;
+
+}
+.sslka{
+    color: black;
+}
+input{
+    margin: 20px;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
