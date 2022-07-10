@@ -1,0 +1,33 @@
+CREATE TABLE Автор(
+	Код_автора int PRIMARY KEY AUTO_INCREMENT,
+	ФИО_автора varchar(50) NOT NULL
+);
+
+CREATE TABLE Читатель(
+	Код_читателя int primary key AUTO_INCREMENT,
+	ФИО varchar(50) NOT NULL,
+	Пароль varchar(50) NOT NULL
+);
+
+CREATE TABLE Админ(
+    Код_админа int PRIMARY KEY AUTO_INCREMENT,
+	Имя varchar(50) NOT NULL,
+	Пароль varchar(50) NOT NULL,
+	Почта varchar(50) NOT NULL
+);
+CREATE TABLE Книги(
+	Код_книги int primary key AUTO_INCREMENT,
+	Название_книги varchar(50) NOT NULL,
+	Код_Автора int,
+	Год_издания varchar(50) NULL,
+    FOREIGN KEY (Код_Автора) REFERENCES Автор(Код_автора)
+);
+CREATE TABLE Выдача(
+	Код_выдачи int primary key AUTO_INCREMENT,
+	Код_книги int,
+	Код_читателя int,
+    FOREIGN key(Код_читателя) REFERENCES Читатель(Код_читателя),
+    FOREIGN key(Код_книги) REFERENCES Книги(Код_книги)
+);
+
+	
